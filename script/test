@@ -1,0 +1,19 @@
+ssh root@15.165.18.138 <<EOF
+    cd /data/www/EP-Jenkins-CICD
+    git pull origin master
+    curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh    | bash
+    . ~/.nvm/nvm.sh
+    nvm install 16.2.0
+    npm install
+    npm install -g typescript
+    npm install -g ts-node
+    npm install -g pm2
+    pm2 install typescript
+    echo "Unit Test"
+    npm run test
+    echo "End to End Test"
+    npm run test:e2e
+    echo "Test Coverage"
+    npm run test:cov
+    exit
+EOF
