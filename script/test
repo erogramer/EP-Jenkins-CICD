@@ -3,12 +3,12 @@ ssh root@15.165.18.138 <<EOF
     git pull origin master
     curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh    | bash
     . ~/.nvm/nvm.sh
-    nvm install 16.2.0
-    npm install
-    npm install -g typescript
-    npm install -g ts-node
-    npm install -g pm2
-    pm2 install typescript
+    nvm install 16.2.0 >/dev/null
+    npm install >/dev/null
+    npm install -g typescript >/dev/null
+    npm install -g ts-node >/dev/null
+    npm install -g pm2 >/dev/null
+    pm2 install typescript >/dev/null
     echo "------------------------------------Unit Test------------------------------------"
     npm run test
     echo "------------------------------------End to End Test------------------------------------"
