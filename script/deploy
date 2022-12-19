@@ -1,4 +1,4 @@
-ssh ubuntu@3.34.45.32 <<EOF
+ssh root@15.165.18.138 <<EOF
     cd /data/www/EP-Jenkins-CICD
     git pull origin master
     curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh    | bash
