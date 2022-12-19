@@ -9,11 +9,11 @@ ssh root@15.165.18.138 <<EOF
     npm install -g ts-node
     npm install -g pm2
     pm2 install typescript
-    echo "Unit Test"
+    echo "------------------------------------Unit Test------------------------------------"
     npm run test
-    echo "End to End Test"
+    echo "------------------------------------End to End Test------------------------------------"
     npm run test:e2e
-    echo "Test Coverage"
+    echo "------------------------------------Test Coverage------------------------------------"
     npm run test:cov
     exit
 EOF
